@@ -10,7 +10,7 @@ word_index=imdb.get_word_index()
 reverse_word_index = {value: key for key, value in word_index.items()}
 
 #load model
-model = load_model('rnnmodel.h5')
+model = load_model('rnnmodel.keras')
 
 #step 2: helper function
 # funtion to decode reviews
@@ -49,4 +49,5 @@ if st.button('Classify'):
     st.write(f'Sentiment: {sentiment}')
     st.write(f'Prediction score" {prediction}')
 else:
+
     st.write('please enter movie review.')
